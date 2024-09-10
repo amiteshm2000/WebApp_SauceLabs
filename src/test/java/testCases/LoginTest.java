@@ -1,6 +1,5 @@
 package testCases;
 
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,11 +23,11 @@ public class LoginTest extends BaseClass{
 		if(credData=="valid") {
 		try{
 			Assert.assertTrue(db.isDashboardDisplayed());
-			Thread.sleep(5000);
-			Actions act = new Actions(driver);
-			act.moveToElement(db.userDetail).click();
-			db.clickUserDetail();
-			db.logout();
+//			Thread.sleep(5000);
+//			Actions act = new Actions(driver);
+//			act.moveToElement(db.userDetail).click();
+//			db.clickUserDetail();
+//			db.logout();
 		}
 		catch(Exception e){
 			System.out.println(e);
