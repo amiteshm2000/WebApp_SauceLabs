@@ -17,7 +17,8 @@ public class DashboardPage{
 	@FindBy(xpath="//h6[normalize-space()='Dashboard']")
 	WebElement dashboard;
 	
-	@FindBy(xpath="//span[@class='oxd-userdropdown-tab']")
+	@FindBy(xpath="//p[@class='oxd-userdropdown-name']")
+	public
 	WebElement userDetail;
 	
 	@FindBy(xpath="//a[text()='Logout']")
