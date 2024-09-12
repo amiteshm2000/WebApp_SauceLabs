@@ -21,7 +21,7 @@ public class BaseClass {
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.get("https://www.saucedemo.com/");
 	}
 	
 	@AfterClass
