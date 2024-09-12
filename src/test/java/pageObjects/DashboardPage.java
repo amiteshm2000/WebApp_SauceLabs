@@ -14,25 +14,38 @@ public class DashboardPage{
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath="//h6[normalize-space()='Dashboard']")
+	@FindBy(xpath="//div[@class='app_logo']")
 	WebElement dashboard;
 	
-	@FindBy(xpath="//p[@class='oxd-userdropdown-name']")
-	public
-	WebElement userDetail;
+	@FindBy(xpath="//button[@id='react-burger-menu-btn']")
+	WebElement menuButton;
 	
-	@FindBy(xpath="//a[text()='Logout']")
-	WebElement logout;
+	@FindBy(xpath="logout_sidebar_link")
+	WebElement logoutButton;
+		
+	@FindBy(xpath="//a[@class='shopping_cart_link']")
+	WebElement cart;
+	
+	@FindBy(xpath="//button[@id='add-to-cart']")
+	WebElement addToCartButton;
 	
 	public boolean isDashboardDisplayed() {
 		return dashboard.isDisplayed();
 	}
 	
-	public void clickUserDetail() {
-		userDetail.click();
+	public void clickMenuButton() {
+		menuButton.click();
+	}
+	
+	public void goToCart() {
+		cart.click();
+	}
+	public void addToCart() {
+		addToCartButton.click();
 	}
 	
 	public void logout() {
-		logout.click();
+		logoutButton.click();
 	}
+
 }

@@ -12,27 +12,24 @@ import pageObjects.LoginPage;
 
 public class BaseClass {
 	public WebDriver driver;
-	public BaseClass() {
-		// TODO Auto-generated constructor stub
-	}
 
 	@BeforeClass()
 	public void login() {
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.get("https://www.saucedemo.com/");
 	}
 	
-//	@AfterClass
-//	public void close() {
-//		driver.quit();
-//	}
+	@AfterClass
+	public void close() {
+		driver.quit();
+	}
 	
 	public void logout() {
 		DashboardPage db= new DashboardPage(driver);
 		if(db.isDashboardDisplayed()) {
-			db.clickUserDetail();
+			db.clickMenuButton();
 			db.logout();		
 		}
 	}

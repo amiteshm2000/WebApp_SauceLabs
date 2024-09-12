@@ -12,16 +12,16 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 		}
 
-	@FindBy(xpath="//input[@name='username']")
+	@FindBy(xpath="//input[@name='user-name']")
 	WebElement usernameBox;
 	
 	@FindBy(xpath="//input[@name='password']")
 	WebElement passwordBox;
 	
-	@FindBy(xpath="//p[text()='Invalid credentials']")
-	WebElement invalidCred;
+	@FindBy(xpath="//div[@class='error-message-container error']/h3")
+	WebElement invalidCredText;
 	
-	@FindBy(xpath="//button[@type='submit']")
+	@FindBy(xpath="//input[@id='login-button']")
 	WebElement loginButton;
 	
 	public void setUsername(String username) {
@@ -37,6 +37,6 @@ public class LoginPage {
 	}
 	
 	public boolean invalidCredDisplayed() {
-		return invalidCred.isDisplayed();
+		return invalidCredText.isDisplayed();
 	}
 }
