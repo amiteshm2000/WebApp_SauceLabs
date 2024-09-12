@@ -12,13 +12,13 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 		}
 
-	@FindBy(xpath="//input[@name='username']")
+	@FindBy(xpath="//input[@name='user-name']")
 	WebElement usernameBox;
 	
 	@FindBy(xpath="//input[@name='password']")
 	WebElement passwordBox;
 	
-	@FindBy(xpath="//p[text()='Invalid credentials']")
+	@FindBy(xpath="//div[@class='error-message-container error']/h3")
 	WebElement invalidCred;
 	
 	@FindBy(xpath="//button[@type='submit']")
