@@ -24,10 +24,10 @@ public class BaseClass {
 	driver.get("https://opensource-demo.orangehrmlive.com/");
 	}
 	
-//	@AfterClass
-//	public void close() {
-//		driver.quit();
-//	}
+	@AfterClass
+	public void close() {
+		driver.quit();
+	}
 	
 	public void logout() {
 		DashboardPage db= new DashboardPage(driver);
