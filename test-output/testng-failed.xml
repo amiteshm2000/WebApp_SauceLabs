@@ -6,7 +6,7 @@
       <class name="testCases.AddToCart">
         <methods>
           <include name="close"/>
-          <include name="login"/>
+          <include name="launch"/>
           <include name="addToCart" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.AddToCart -->

@@ -12,16 +12,12 @@ public class LoginTest extends BaseClass{
 
 		@Test(dataProvider="LoginData", dataProviderClass=DataProviders.class)
 		public void loginVerification(String username, String password, String credData) {
-			LoginPage lp=new LoginPage(driver);
-			lp.setUsername(username);
-			lp.setPassword(password);
-			lp.clickLoginButton();
+			login(username, password, credData);
 			DashboardPage db= new DashboardPage(driver);
 		if(credData=="valid") {
 		try{
 			Assert.assertTrue(db.isDashboardDisplayed());
-//			db.clickMenuButton();
-//			db.logout();
+			logout();
 		}
 		catch(Exception e){
 			System.out.println(e);
@@ -29,6 +25,7 @@ public class LoginTest extends BaseClass{
 		}
 		else if(credData=="invalid") {
 			try{
+				LoginPage lp= new LoginPage(driver);
 				Assert.assertTrue(lp.invalidCredDisplayed());
 			}
 			catch(Exception e){
