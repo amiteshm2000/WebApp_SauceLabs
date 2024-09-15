@@ -5,9 +5,9 @@
     <classes>
       <class name="testCases.AddToCart">
         <methods>
+          <include name="loginVerification" invocation-numbers="0"/>
           <include name="close"/>
           <include name="launch"/>
-          <include name="addToCart" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.AddToCart -->
     </classes>
