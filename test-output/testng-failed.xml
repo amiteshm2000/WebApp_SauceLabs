@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="chrome(failed)">
+    <parameter name="os" value="window"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testCases.AddToCart">
+        <methods>
+          <include name="close"/>
+          <include name="launch"/>
+          <include name="addToCart" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testCases.AddToCart -->
+      <class name="testCases.LoginTest">
         <methods>
           <include name="loginVerification" invocation-numbers="0"/>
           <include name="close"/>
           <include name="launch"/>
         </methods>
-      </class> <!-- testCases.AddToCart -->
+      </class> <!-- testCases.LoginTest -->
+      <class name="testCases.CartCheckoutTest">
+        <methods>
+          <include name="cartCheckOut" invocation-numbers="0"/>
+          <include name="close"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- testCases.CartCheckoutTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

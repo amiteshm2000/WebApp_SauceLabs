@@ -51,7 +51,6 @@ public class CartPage{
 
 	}
 
-	
 //	Clicking on add to cart button
 	public void clickAddToCart() {
 			addToCart.click();	

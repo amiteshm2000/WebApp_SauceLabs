@@ -8,7 +8,7 @@ public class DataProviders {
 	@DataProvider(name="LoginData")
 	public String[][] getLoginData() throws IOException{
 		
-		ExcelUtility exc= new ExcelUtility("./testData\\LoginTestData.xlsx", "loginTestData");
+		ExcelUtility exc= new ExcelUtility("./testData\\TestData.xlsx", "loginTestData");
 		int rowNum =exc.getRowCount();
 		int cellNum=exc.getCellCount();
 		
@@ -25,7 +25,7 @@ public class DataProviders {
 	@DataProvider(name="ItemData")
 	public String[][] getItemData() throws IOException{
 		
-		ExcelUtility exc= new ExcelUtility("./testData\\AddToCart.xlsx", "itemData");
+		ExcelUtility exc= new ExcelUtility("./testData\\TestData.xlsx", "itemData");
 		int rowNum =exc.getRowCount();
 		int cellNum=exc.getCellCount();
 		

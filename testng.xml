@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test name="Test">
+	<test name="chrome" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="os" value="window"></parameter>
+		<classes>
+			<class name="testCases.LoginTest" />
+			<class name="testCases.AddToCart" />
+			<class name="testCases.CartCheckoutTest" />
+		</classes>
+	</test>
+	<test name="edge" enabled="false">
+		<parameter name="browser" value="edge"></parameter>
+		<parameter name="os" value="window"></parameter>
 		<classes>
 			<class name="testCases.LoginTest" />
 			<class name="testCases.AddToCart" />

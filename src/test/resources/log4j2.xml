@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <!-- Define appenders -->
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601} [%t] %-5p %c{1} - %m%n"/>
+        </Console>
+
+        <!-- File Appender -->
+        <File name="FileAppender" fileName="logs/app.log">
+            <PatternLayout pattern="%d{ISO8601} [%t] %-5p %c{1} - %m%n"/>
+            <!-- Optional: Control file size and number of backups -->
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </File>
+    </Appenders>
+
+    <!-- Define loggers -->
+    <Loggers>
+        <!-- Root Logger -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+
+        <!-- Example Logger for a specific package 
+        <Logger name="com.example" level="debug" additivity="false">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>-->
+    </Loggers>
+</Configuration>

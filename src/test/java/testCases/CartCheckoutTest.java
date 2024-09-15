@@ -7,30 +7,26 @@ import pageObjects.CheckOutPage;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
-public class CartCheckoutTest extends BaseClass{
+public class CartCheckoutTest extends BaseClass {
 
-	public CartCheckoutTest() {
-		// TODO Auto-generated constructor stub
-	}
-
-	@Test(dataProvider="ItemData", dataProviderClass=DataProviders.class)
+	@Test(dataProvider = "ItemData", dataProviderClass = DataProviders.class)
 	public void cartCheckOut(String username, String password, String credData, String items) {
-		
+
 		login(username, password, credData);
-		CartPage cart= new CartPage(driver);
-		String[] item=items.split(",");
-		for(String s:item) {
+		CartPage cart = new CartPage(driver);
+		String[] item = items.split(",");
+		for (String s : item) {
 			cart.clickOnItem(driver, s.trim());
 			cart.clickAddToCart();
 			cart.clcikOnBack();
 		}
 		cart.clickGoToCart();
 		cart.clcikOnCheckOutButton();
-		CheckOutPage check= new CheckOutPage(driver);
+		CheckOutPage check = new CheckOutPage(driver);
 		check.setFirstName();
 		check.setLastName();
 		check.setPostalCode();
 		check.clickContinue();
-		
+
 	}
 }
