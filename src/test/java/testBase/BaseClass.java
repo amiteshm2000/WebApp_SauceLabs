@@ -25,7 +25,7 @@ public class BaseClass {
 //	logger=LogManager.getLogger(this.getClass());
 	switch(browser) {
 	case "chrome": driver = new ChromeDriver(); break;
-	case "edge" : new EdgeDriver(); break;
+	case "edge" : driver =new EdgeDriver(); break;
 	default : System.out.println("***Invalid Browser***");
 	}
 	driver.manage().window().maximize();

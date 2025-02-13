@@ -17,7 +17,7 @@
             <DefaultRolloverStrategy max="5"/>
         </File>
     </Appenders>
-
+    
     <!-- Define loggers -->
     <Loggers>
         <!-- Root Logger -->
@@ -25,10 +25,11 @@
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileAppender"/>
         </Root>
-
+        
         <!-- Example Logger for a specific package 
         <Logger name="com.example" level="debug" additivity="false">
             <AppenderRef ref="FileAppender"/>
         </Logger>-->
+		
     </Loggers>
 </Configuration>
