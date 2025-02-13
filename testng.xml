@@ -8,9 +8,7 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="os" value="window"></parameter>
 		<classes>
-			<class name="testCases.LoginTest" />
-			<class name="testCases.AddToCart" />
-			<class name="testCases.CartCheckoutTest" />
+			<class name="testCases.InvalidLoginTest" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

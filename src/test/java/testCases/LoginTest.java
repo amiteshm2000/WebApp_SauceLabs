@@ -19,14 +19,14 @@ public class LoginTest extends BaseClass {
 				Assert.assertTrue(db.isDashboardDisplayed());
 				logout();
 			} catch (Exception e) {
-				System.out.println(e);
+				System.out.println(e.getMessage());
 			}
 		} else if (credData == "invalid") {
 			try {
 				LoginPage lp = new LoginPage(driver);
 				Assert.assertTrue(lp.invalidCredDisplayed());
 			} catch (Exception e) {
-				System.out.println(e);
+				System.out.println(e.getMessage());
 			}
 		}
 	}
