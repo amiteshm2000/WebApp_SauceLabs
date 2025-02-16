@@ -5,11 +5,13 @@ import org.testng.annotations.Test;
 
 import pageObjects.InvalidLoginPage;
 import testBase.BaseClass;
-import utilities.DataProviders;
+import utilities.*;
 
 public class InvalidLoginTest extends BaseClass{
 	
-	@Test(dataProvider="InvalidLoginData", dataProviderClass = DataProviders.class)
+	@Test(	dataProvider="InvalidLoginData",
+			dataProviderClass = DataProviders.class,
+			retryAnalyzer = RetryAnalyzer.class)
 	public void invalidLoginTest(String username, String password) {
 		
 		InvalidLoginPage login = new InvalidLoginPage(driver);
