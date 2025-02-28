@@ -17,16 +17,16 @@ public class CartPage{
 	}
 	
 	@FindBy(xpath="//button[@id='add-to-cart']")
-	WebElement addToCart;
+	private WebElement addToCart;
 	
 	@FindBy(xpath="//button[@id='back-to-products']")
-	WebElement backButton;
+	private WebElement backButton;
 	
 	@FindBy(xpath="//a[@class='shopping_cart_link']")
-	WebElement goToCart;
+	private WebElement goToCart;
 	
 	@FindBy(xpath="//button[@id='checkout']")
-	WebElement checkOutButton;
+	private WebElement checkOutButton;
 	
 	public void clickOnItem(WebDriver driver , String item) {
 		String path="//div[contains(text(),'"+item+"')]";
