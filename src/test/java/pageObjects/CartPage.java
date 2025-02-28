@@ -7,15 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import testBase.BaseClass;
 
 public class CartPage{
-
 	public CartPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(xpath="//button[@id='add-to-cart']")
 	private WebElement addToCart;
 	
@@ -39,7 +37,6 @@ public class CartPage{
 		WebElement cartItem =driver.findElement(By.xpath(path));
 			return cartItem.isDisplayed();
 	}
-
 	public void clickAddToCart() {
 			addToCart.click();	
 	}
