@@ -25,16 +25,16 @@ public class CartPage{
 //	WebElement itemButton;
 	
 	@FindBy(xpath="//button[@id='add-to-cart']")
-	WebElement addToCart;
+	private WebElement addToCart;
 	
 	@FindBy(xpath="//button[@id='back-to-products']")
-	WebElement backButton;
+	private WebElement backButton;
 	
 	@FindBy(xpath="//a[@class='shopping_cart_link']")
-	WebElement goToCart;
+	private WebElement goToCart;
 	
 	@FindBy(xpath="//button[@id='checkout']")
-	WebElement checkOutButton;
+	private WebElement checkOutButton;
 	
 //	clicking on specific items on DashBoard
 	public void clickOnItem(WebDriver driver , String item) {

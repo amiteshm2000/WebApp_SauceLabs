@@ -13,10 +13,10 @@ public class CheckOutPage {
 	}
 	
 	@FindBy(xpath="//input[@id='first-name']")
-	WebElement firstName;
+	private WebElement firstName;
 	
 	@FindBy(xpath="//input[@id='last-name']")
-	WebElement lastName;
+	private WebElement lastName;
 	
 	@FindBy(xpath="//input[@id='postal-code']")
 	WebElement postalCode;
